@@ -5,6 +5,4 @@ base:
     - users
     - nginx
     - redis-server
-    
     - php7
-    - mysql
