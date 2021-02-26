@@ -3,6 +3,11 @@ install_apache:
     - pkgs:
       - httpd
 
+apache_service:
+  service.running:
+    - name: httpd
+    - enable: True
+    
 index_html:
   file.managed:
     - name: /var/www/html/index.html
@@ -10,9 +15,3 @@ index_html:
     - group: apache
     - mode: 644
     - source: salt://apache/templates/index.html
-
-apache_service:
-  service.running:
-    - name: httpd
-    - enable: True
-    
