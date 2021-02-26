@@ -11,7 +11,7 @@ apache_service:
 index_html:
   file.managed:
     - name: /var/www/html/index.html
-    - user: root
-    - group: root
+    - user: godiego
+    - group: godiego
     - mode: 644
     - source: salt://apache/templates/index.html
