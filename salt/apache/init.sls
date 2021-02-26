@@ -1,7 +1,7 @@
 install_apache:
   pkg.installed:
     - pkgs:
-      - httpd
+      - apache2
 
 index_html:
   file.managed:
@@ -13,6 +13,6 @@ index_html:
 
 apache_service:
   service.running:
-    - name: httpd
+    - name: apache2
     - enable: True
     
